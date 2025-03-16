@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+  min-height: 100vh;
+  background-color: black;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: black;
+  padding: 10px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu img {
+  width: 150px;
+  border-radius: 5px;
+}
+
+.lista {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.lista .elemto {
+  margin-left: 50px;
+}
+
+.lista .elemto a {
+  text-decoration: none;
+  color: white;
+  transition: transform 0.2s, background-color 0.2s;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.lista .elemto a:hover {
+  transform: scale(1.1);
+  background-color: gray;
+}
+
+.caja {
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.caja:hover {
+  transform: scale(1.05);
+  background-color: #222;
+}
+
+.caja img {
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+input[type="text"] {
+  background-color: white;
+  border: solid 2px white;
+  color: black;
+  font-weight: bold;
+  outline: none;
+  height: 30px;
+  width: 150px;
+  border-radius: 5px;
+}
+
+input[type="text"]::placeholder {
+  color: black;
+}
+
+footer {
+  text-align: center;
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  width: 100%;
+}
+
+.img2 {
+  max-width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .menu {
+    flex-direction: column;
+  }
+  .lista {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+  .lista .elemto {
+    margin: 10px 0;
+  }
+  .menu img {
+    width: 100px;
+  }
+  .caja img {
+    max-width: 200px;
+  }
+}
